@@ -4,22 +4,21 @@ class Vetor:
         self.y = y
         self.z = z
 
-    def inserirVetor(vetores: list):
-        if len(vetores) > 3:
-            print("operação invalida, limite vetores atingido")
-            return
-        x = input("adicione o primeiro valor")
-        y = input("adicione o  valor")
-        z = input("adicione o primeiro valor")
+    def inserirVetor():
+        x = input("adicione o valor de X\n")
+        y = input("adicione o valor de Y\n")
+        z = input("adicione o valor de Z\n")
         vetor = Vetor(x, y, z)
-        vetores.append(vetor)
-        print("vetor adicionado com sucesso")
-        return
+        print("vetor adicionado com sucesso \n\n")
+        return vetor
 
     def printVetor(self, index):
-        print(index+". "+"("+self.x+", "+self.y+", "+self.z+")")
+        print(str(index)+". "+"("+self.x+", "+self.y+", "+self.z+")\n")
 
     def printMultiplosVetores(self, listaVetores: list):
         for idx, x in enumerate(listaVetores):
             self.printVetor(x, idx+1)
 
+    def selecionarVetores():
+        selectIndex = input("Digite o número do vetor que deseja selecionar: ")
+        return selectIndex
