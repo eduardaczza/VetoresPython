@@ -1,7 +1,7 @@
 from Operations import (Modulo, ProdutoVetorial, ProdutoEscalar,
                         Angulo, Ortogonalizade)
 
-
+    # Menu principal 
 def inicial():
     print("\n\n--- Menu ---")
     print("1. inserir novos valores")
@@ -11,7 +11,7 @@ def inicial():
     print("5. selecionar operações")
     print("6. Sair \n\n")
 
-
+    # Menu para selecionar e realizar operações entre vetores selecionados
 def operacoes(selecionados: list):
     print("\n\n--- Menu ---")
     print("1. Calcular Módulo")

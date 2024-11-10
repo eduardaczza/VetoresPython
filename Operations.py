@@ -8,7 +8,7 @@ def Modulo(vetor: Vetor):
     math.sqrt(math.pow(vetor.x, 2)+math.pow(vetor.y, 2)+math.pow(vetor.z, 2))
 
 
-# Calcula o ângulo entre 2 vetores
+# Calcula o ângulo entre 2 vetores usando produto escalar
 def Angulo(vetor1: Vetor, vetor2: Vetor):
     prodInterno = (vetor1.x*vetor2.x) + \
         (vetor1.y*vetor2.y) + (vetor1.z*vetor2.z)
@@ -16,10 +16,10 @@ def Angulo(vetor1: Vetor, vetor2: Vetor):
     modulov2 = Modulo(vetor2)
     cosPhi = prodInterno/(modulov1*modulov2)
 
-    res = math.acos(cosPhi) * (180/math.pi)
+    res = math.acos(cosPhi) * (180/math.pi)  #conversão de radianos para graus 
     return res
 
-
+    # Calcula o produto escalar entre dois vetores
 def ProdutoEscalar(vetor1: Vetor, vetor2: Vetor):
     res = (vetor1.x*vetor2.x)+(vetor1.x*vetor2.x)+(vetor1.x*vetor2.x)
     return res
@@ -27,7 +27,7 @@ def ProdutoEscalar(vetor1: Vetor, vetor2: Vetor):
 # https://pt.khanacademy.org/math/multivariable-calculus/thinking-about-multivariable-function/x786f2022:vectors-and-matrices/a/cross-products-mvc
 # fonte do cálculo
 
-
+    # Calcula o produto vetorial entre dois vetores
 def ProdutoVetorial(vetor1: Vetor, vetor2: Vetor):
     resX = (vetor1.y*vetor2.z)-(vetor1.z*vetor2.y)
     resY = (vetor1.z*vetor2.x)-(vetor1.x*vetor2.y)
@@ -36,7 +36,7 @@ def ProdutoVetorial(vetor1: Vetor, vetor2: Vetor):
     resVetor = Vetor(resX, resY, resZ)
     return resVetor
 
-
+    # Verifica se dois vetores são ortogonais (produto escalar igual a zero)
 def Ortogonalizade(vetor1: Vetor, vetor2: Vetor):
     if ProdutoEscalar(vetor1, vetor2) == 0:
         return True
